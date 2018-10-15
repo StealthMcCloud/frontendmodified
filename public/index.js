@@ -2,12 +2,11 @@ const userCreateForm = document.getElementById("user-create-form")
 
 const userCreateSubmitButton = userCreateForm.querySelector("button[type='submit']")
 
-const submitButton = document.getElementById("submitButton")
 userCreateForm.addEventListener("submit", handleFormSubmit);
-
 
 function handleFormSubmit(event) {
     event.preventDefault();
+
     User = {
         email: document.getElementById("email").value,
         userName: document.getElementById("userName").value,
@@ -17,6 +16,7 @@ function handleFormSubmit(event) {
     
     fetch("/api/user", {
         method: "POST",
+        body: JSON.stringify(User),
         headers: { "Content-Type": "application/json" },
     })
     .then((res) => {
@@ -30,8 +30,4 @@ function handleFormSubmit(event) {
     .then(res => {
         console.log(res)
     })
-}
-
-function addUser() {
-        
 }
