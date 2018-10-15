@@ -9,13 +9,13 @@ Today, you're going to write server code *and* client code in the same project.
 ## Client Code
 
 ### In the HTML file
-1. Add email and username input fields to the form. *(1 point)*
-2. Add at least two other input fields to the form. Use your own personal experience with user-creation forms as a guide. *(1 point)*
+<!-- 1. Add email and username input fields to the form. *(1 point)*
+2. Add at least two other input fields to the form. Use your own personal experience with user-creation forms as a guide. *(1 point)* -->
 
 ### In `index.js` – this is your client JS
-1. Add an event listener to the submit button. *(1 point)*
-2. Form submissions have some automated behavior (which you'll be learning about soon). We want to override this behavior. To do this, use `event.preventDefault()` inside your event listener's callback function. *(1 point)*
-3. From your callback, write some code to take all of your input fields and put them together into a single User object. *(2 point)*
+<!-- 1. Add an event listener to the submit button. *(1 point)* -->
+<!-- 2. Form submissions have some automated behavior (which you'll be learning about soon). We want to override this behavior. To do this, use `event.preventDefault()` inside your event listener's callback function. *(1 point)* -->
+<!-- 3. From your callback, write some code to take all of your input fields and put them together into a single User object. *(2 point)* -->
 4. Stringify your User object into JSON. *(1 point)*
 5. Write a POST fetch request which sends this JSONified User object to your server code. *(2 point)*
 6. When the response comes back, display some sort of "success" message to the user if the status code is 201, and an error message of "Username already taken" if the status code is 409. *(1 point)*

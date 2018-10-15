@@ -7,11 +7,20 @@
     <title>Create User</title>
 </head>
 <body>
-    <form id="user-create-form" action="./api/user" method="post">
+    
+    <form id="user-create-form" action="/api/user" method="post">
         
-        <!-- Add user input fields here -->
+        <input type="email" id="email" autocomplete="email" placeholder="Enter E-Mail">
+        <br>
+        <input type="text" id="userName" autocomplete="username" placeholder="Enter User Name">
+        <br>
+        <input type="text" id="fullName" autocomplete="given-name" placeholder="Enter Full Name">
+        <br>
+        <input type="password" id="password" autocomplete="current-password" placeholder="Enter Password">
+        <br>
+        <button type="submit" id="submitButton">Create User</button>
 
-        <button type="submit">Create User</button>
     </form>
+    <script src="index.js"></script>
 </body>
 </html>
