@@ -12,7 +12,7 @@
 <body>
 
     <form id="user-create-form" action="/api/user" method="post">
-        <fieldset id="borderBox">
+        <fieldset class="borderBox">
             <input type="email" id="email" autocomplete="email" placeholder="Enter E-Mail">
             <br>
             <input type="text" id="userName" autocomplete="username" placeholder="Enter User Name">
@@ -26,7 +26,7 @@
             <input type="url" id="homepage" placeholder="Enter Homepage or Social Media Link" disabled>
             <br>
         </fieldset>
-        <fieldset id="contactMethod">
+        <fieldset id="contactMethod" class="borderBox">
             <label>Contact Method: </label>
             <input type="radio" name="contactMethod" id="contactEmail" value="E-Mail" checked=true />
             <label for="contactEmail">E-Mail</label>
@@ -35,7 +35,7 @@
             <input type="radio" name="contactMethod" id="contactPhone" value="Phone Call" />
             <label for="contactPhone">Phone Call</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="borderBox">
             <label>Preferred Devices</label>
             <div>
                 <input type="checkbox" id="Android" name="device" value="Android" checked />
@@ -56,14 +56,14 @@
                 <label for="Windows">Windows</label>
             </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="borderBox">
             <select multiple id="level">
                 <option value="User">User</option>
                 <option value="Moderator">Moderator</option>
                 <option value="Administrator">Administrator</option>
             </select>
         </fieldset>
-        <fieldset>Favorite Color: <input type="color" id="color" name="favcolor" value="#ff0000"></fieldset>
+        <fieldset class="borderBox">Favorite Color: <input type="color" id="color" name="favcolor" value="#ff0000"></fieldset>
         <button type="submit" id="submitButton">Create User</button>
         <button type="reset" value="Reset">Reset</button>
 
