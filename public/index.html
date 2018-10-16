@@ -1,26 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create User</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <form id="user-create-form" action="/api/user" method="post">
-        
-        <input type="email" id="email" autocomplete="email" placeholder="Enter E-Mail">
-        <br>
-        <input type="text" id="userName" autocomplete="username" placeholder="Enter User Name">
-        <br>
-        <input type="text" id="fullName" autocomplete="given-name" placeholder="Enter Full Name">
-        <br>
-        <input type="password" id="password" autocomplete="current-password" placeholder="Enter Password">
-        <br>
+        <fieldset id="borderBox">
+            <input type="email" id="email" autocomplete="email" placeholder="Enter E-Mail">
+            <br>
+            <input type="text" id="userName" autocomplete="username" placeholder="Enter User Name">
+            <br>
+            <input type="text" id="fullName" autocomplete="given-name" placeholder="Enter Full Name" autofocus>
+            <br>
+            <input type="password" id="password" autocomplete="current-password" placeholder="Enter Password">
+            <br>
+            <input type="tel" id="telephone" placeholder="Enter Phone Number">
+            <br>
+            <input type="url" id="homepage" placeholder="Enter Homepage or Social Media Link" disabled>
+            <br>
+        </fieldset>
+        <fieldset id="contactMethod">
+            <label>Contact Method: </label>
+            <input type="radio" name="contactMethod" id="contactEmail" value="E-Mail" checked=true />
+            <label for="contactEmail">E-Mail</label>
+            <input type="radio" name="contactMethod" id="contactText" value="Text" />
+            <label for="contactText">Text</label>
+            <input type="radio" name="contactMethod" id="contactPhone" value="Phone Call" />
+            <label for="contactPhone">Phone Call</label>
+        </fieldset>
+        <fieldset>
+            <label>Preferred Devices</label>
+            <div>
+                <input type="checkbox" id="Android" name="device" value="Android" checked />
+                <label for="Android">Android</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="IOS" name="device" value="IOS" />
+                <label for="IOS">IOS</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="Mac" name="device" value="Mac" />
+                <label for="Mac">Mac</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Windows" name="device" value="Windows" />
+                <label for="Windows">Windows</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <select multiple id="level">
+                <option value="User">User</option>
+                <option value="Moderator">Moderator</option>
+                <option value="Administrator">Administrator</option>
+            </select>
+        </fieldset>
+        <fieldset>Favorite Color: <input type="color" id="color" name="favcolor" value="#ff0000"></fieldset>
         <button type="submit" id="submitButton">Create User</button>
+        <button type="reset" value="Reset">Reset</button>
 
     </form>
     <script src="index.js"></script>
 </body>
+
 </html>
+
+<!-- I need to come back and fix the checkboxes to make sure the get added to the user form as well when it is submitted. -->

@@ -1,0 +1,8 @@
+#borderBox {
+    background-color: lightblue;
+}
+
+#borderBox input {
+    margin-top: 1px;
+    border: 5px outset gray;
+}
